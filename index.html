@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malicious Translator 😈 — Dramatically Misinterpreted</title>
+  <meta name="description" content="Turn innocent sentences into dramatic soap-opera gossip, supervillain schemes, and toxic accusations. 100% offline & delightfully petty.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars-bg"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <main class="app-container">
+    <header class="header">
+      <div class="badge">⚠️ 100% FICTIONAL & UNHINGED</div>
+      <h1 class="title">Malicious Translator <span class="devil-emoji">😈</span></h1>
+      <p class="subtitle">Where innocent words get twisted into toxic accusations, villainous monologues, and spicy drama.</p>
+    </header>
+
+    <!-- Mode Selector Bar -->
+    <section class="mode-selector" aria-label="Translation Modes">
+      <div class="mode-label">CHOOSE YOUR PETTY VIBE:</div>
+      <div class="mode-grid">
+        <button type="button" class="mode-btn active" data-mode="gossip" id="btn-mode-gossip">
+          <span class="mode-icon">💅</span>
+          <span class="mode-text">Gossip Mode</span>
+        </button>
+        <button type="button" class="mode-btn" data-mode="villain" id="btn-mode-villain">
+          <span class="mode-icon">😈</span>
+          <span class="mode-text">Villain Mode</span>
+        </button>
+        <button type="button" class="mode-btn" data-mode="ex" id="btn-mode-ex">
+          <span class="mode-icon">💔</span>
+          <span class="mode-text">Jealous Ex</span>
+        </button>
+        <button type="button" class="mode-btn" data-mode="chaos" id="btn-mode-chaos">
+          <span class="mode-icon">💀</span>
+          <span class="mode-text">Chaos Mode</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Input Section -->
+    <section class="input-card">
+      <div class="card-header">
+        <label for="user-input" class="input-label">Innocent Sentence Here:</label>
+        <div class="quick-prompts">
+          <span class="prompt-chip" data-sample="I just bought a sandwich.">"I bought a sandwich"</span>
+          <span class="prompt-chip" data-sample="I have to work late tonight.">"Working late tonight"</span>
+          <span class="prompt-chip" data-sample="I'm going to take a nap.">"Taking a nap"</span>
+          <span class="prompt-chip" data-sample="I forgot to call you back.">"Forgot to call back"</span>
+        </div>
+      </div>
+      <div class="input-wrapper">
+        <textarea 
+          id="user-input" 
+          placeholder="e.g. 'I'm making a cup of coffee' or 'Talk to you tomorrow'..." 
+          maxlength="280"
+          rows="3"
+        ></textarea>
+        <div class="char-count"><span id="char-num">0</span>/280</div>
+      </div>
+
+      <div class="action-row">
+        <button type="button" id="translate-btn" class="glow-btn primary-btn">
+          <span class="btn-icon">⚡</span> Misinterpret This!
+        </button>
+        <button type="button" id="random-btn" class="glow-btn secondary-btn" title="Roll a random innocent sentence">
+          🎲 Random Input
+        </button>
+      </div>
+    </section>
+
+    <!-- Drama Output Section -->
+    <section class="result-card hidden" id="result-card">
+      <div class="result-header">
+        <div class="result-title-group">
+          <span class="pulse-indicator"></span>
+          <span id="result-mode-tag" class="result-mode-tag">💅 GOSSIP TRANSLATION</span>
+        </div>
+        <div class="parody-disclaimer">FICTIONAL PARODY ONLY</div>
+      </div>
+
+      <div class="drama-bubble" id="drama-bubble">
+        <p class="drama-text" id="drama-text">“...”</p>
+      </div>
+
+      <div class="subtext-container">
+        <div class="subtext-item">
+          <span class="subtext-label">🔍 Toxic Subtext:</span>
+          <span id="toxic-subtext" class="subtext-val">Deciphering hidden malice...</span>
+        </div>
+        <div class="subtext-item">
+          <span class="subtext-label">🚨 Drama Meter:</span>
+          <div class="meter-bar-wrap">
+            <div class="meter-bar" id="meter-bar" style="width: 85%;"></div>
+          </div>
+          <span id="drama-level-text" class="drama-level-text">98% Unhinged</span>
+        </div>
+      </div>
+
+      <!-- Result Controls -->
+      <div class="result-actions">
+        <button type="button" id="twist-btn" class="glow-btn twist-btn">
+          <span>🔄</span> Twist Again
+        </button>
+        <button type="button" id="copy-btn" class="glow-btn copy-btn">
+          <span id="copy-icon">📋</span> <span id="copy-text">Copy Drama</span>
+        </button>
+        <button type="button" id="clear-btn" class="glow-btn ghost-btn">
+          <span>🧹</span> Reset
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer Disclaimer -->
+    <footer class="footer">
+      <p>⚠️ <strong>Disclaimer:</strong> This application deliberately distorts words for comedic entertainment. All translations are satirical, fictional nonsense generated on-device.</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast">Copied to clipboard! 💅</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
